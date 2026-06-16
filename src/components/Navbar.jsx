@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center">
-            <img src={logoImg} alt="Sangam Plywood Logo" className="h-12 md:h-16 w-auto" />
+            <img src={logoImg} alt="Sangam Plywood Logo" className="h-10 md:h-16 w-auto" />
           </Link>
 
           {/* Desktop Menu */}

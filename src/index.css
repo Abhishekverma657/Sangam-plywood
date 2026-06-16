@@ -27,6 +27,11 @@
   body {
     @apply bg-background text-text-main font-sans antialiased;
   }
+  ::selection {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    -webkit-text-fill-color: #1a1a1a;
+  }
 }
 
 .glass-panel {
@@ -37,7 +42,7 @@
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, #8b1c20 0%, #d4af37 50%, #611012 100%);
+  background: linear-gradient(135deg, #d4af37 0%, #ffdf73 50%, #b8860b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

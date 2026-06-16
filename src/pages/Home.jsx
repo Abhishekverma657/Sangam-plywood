@@ -79,12 +79,11 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <div className="inline-block px-4 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary font-medium text-sm mb-6 backdrop-blur-sm">
+            <div className="inline-block px-4 py-1 rounded-full border border-white/30 bg-white/10 text-white font-medium text-sm mb-6 backdrop-blur-md">
               {slides[currentSlide].title}
             </div>
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-white leading-tight mb-6 drop-shadow-md">
-              <span className="gold-gradient-text drop-shadow-sm">{slides[currentSlide].subtitle.split(' ')[0]}</span>{' '}
-              {slides[currentSlide].subtitle.substring(slides[currentSlide].subtitle.indexOf(' ') + 1)}
+              {slides[currentSlide].subtitle}
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed drop-shadow">
               {slides[currentSlide].desc}

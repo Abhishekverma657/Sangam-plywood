@@ -1,6 +1,6 @@
 import { Phone, MapPin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logoImg from '../assets/Sangam_logo.png';
+import logoImg from '../assets/sangam-logo1.png';
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center mb-6">
-              <img src={logoImg} alt="Sangam Plywood Logo" className="h-20 w-auto bg-white/10 p-2 rounded-lg" />
+              <img src={logoImg} alt="Sangam Plywood Logo" className="h-20 w-auto" />
             </Link>
             <p className="text-white/80 mb-6 leading-relaxed">
               Premium quality wood and plywood products for commercial and residential applications.
