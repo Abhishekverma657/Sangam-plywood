@@ -32,6 +32,11 @@
     color: #1a1a1a;
     -webkit-text-fill-color: #1a1a1a;
   }
+  footer ::selection, footer *::selection {
+    background-color: #ffffff !important;
+    color: #8b1c20 !important;
+    -webkit-text-fill-color: #8b1c20 !important;
+  }
 }
 
 .glass-panel {

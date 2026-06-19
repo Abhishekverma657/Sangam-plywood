@@ -91,7 +91,7 @@ const Navbar = () => {
               className="flex items-center justify-center gap-2 bg-primary text-background px-5 py-3 rounded-md font-medium mt-4"
             >
               <Phone size={18} />
-              <span>+91-9460756014</span>
+              <span>+91 94607-56014</span>
             </a>
           </div>
         </div>

@@ -15,6 +15,7 @@ const productCategories = [
       "15 Layer Plywood",
       "Flexible Plywood",
       "Calibrated Plywood",
+      "Shuttering Plywood",
       "Film Faced Shuttering Ply",
       "Teak Ply"
     ]
