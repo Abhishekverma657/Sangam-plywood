@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { Award, ShieldCheck, ThumbsUp, Truck } from 'lucide-react';
 import woodTexture from '../assets/wood_texture_macro.png';
 import officeImg from '../assets/office_wood_interior.png';
+import founderImg from '../assets/Founder.jpeg';
+import directorImg from '../assets/Director.jpeg';
 
 const features = [
   { icon: <Award size={24} />, title: 'Premium Quality', desc: 'Sourced from the finest timber.' },
@@ -12,6 +14,7 @@ const features = [
 
 const About = () => {
   return (
+    <>
     <section className="py-24 bg-surface relative overflow-hidden min-h-[calc(100vh-80px)]">
       {/* Decorative element */}
       <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none" 
@@ -89,6 +92,65 @@ const About = () => {
         </div>
       </div>
     </section>
+
+    {/* Leadership Section */}
+    <section className="py-24 bg-background relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Our Leadership</h2>
+            <h3 className="text-4xl font-serif font-bold text-text-main mb-6">
+              Meet The <span className="gold-gradient-text">Founders</span>
+            </h3>
+            <p className="text-text-muted text-lg">
+              The visionaries behind Sangam Plywood who have built a legacy of trust, quality, and excellence in the wood industry.
+            </p>
+          </motion.div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          {/* Founder */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-panel p-8 rounded-2xl flex flex-col items-center text-center hover-glow border-t-4 border-t-primary shadow-lg"
+          >
+            <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-xl">
+              <img src={founderImg} alt="Satyanarayan Kabra" className="w-full h-full object-cover object-top" />
+            </div>
+            <h4 className="text-2xl font-serif font-bold text-text-main mb-1">Satyanarayan Kabra</h4>
+            <p className="text-primary font-bold mb-4 uppercase tracking-wider text-sm">Founder</p>
+            <p className="text-text-muted leading-relaxed">
+              With a deep-rooted passion for quality and business ethics, Satyanarayan Kabra laid the foundation of Sangam Plywood. His vision and perseverance have been the guiding light in establishing the company as a trusted name in the industry.
+            </p>
+          </motion.div>
+
+          {/* Director */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="glass-panel p-8 rounded-2xl flex flex-col items-center text-center hover-glow border-t-4 border-t-primary shadow-lg"
+          >
+            <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-xl">
+              <img src={directorImg} alt="Rajkumar Kabra" className="w-full h-full object-cover object-top" />
+            </div>
+            <h4 className="text-2xl font-serif font-bold text-text-main mb-1">Rajkumar Kabra</h4>
+            <p className="text-primary font-bold mb-4 uppercase tracking-wider text-sm">Director</p>
+            <p className="text-text-muted leading-relaxed">
+              Carrying the legacy forward, Rajkumar Kabra brings modern perspectives and dynamic leadership to Sangam Plywood. Under his direction, the company continues to expand its reach and set new benchmarks for excellence.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+    </>
   );
 };
 
