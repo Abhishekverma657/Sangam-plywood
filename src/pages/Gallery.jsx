@@ -89,7 +89,7 @@ const Gallery = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-16 rounded-2xl overflow-hidden glass-panel relative w-full group shadow-lg border border-white/10"
+            className="mb-16 rounded-2xl overflow-hidden glass-panel relative max-w-5xl mx-auto group shadow-2xl border border-white/10 aspect-video bg-black"
           >
             <video 
               src={introVideo} 
@@ -98,10 +98,13 @@ const Gallery = () => {
               muted 
               playsInline
               controls
-              className="w-full h-auto max-h-[60vh] object-cover"
+              className="w-full h-full object-cover"
             ></video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none opacity-0 group-hover:opacity-100">
+            {/* Overlay Gradient from top so bottom controls are not dimmed */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/20 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-2/3"></div>
+            
+            {/* Text at top */}
+            <div className="absolute top-0 left-0 w-full p-6 md:p-10 -translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none opacity-0 group-hover:opacity-100 z-10">
               <span className="inline-block px-3 py-1 bg-primary/20 text-primary border border-primary/30 rounded-full text-xs font-bold tracking-wider uppercase mb-3 backdrop-blur-sm">
                 Featured Presentation
               </span>
