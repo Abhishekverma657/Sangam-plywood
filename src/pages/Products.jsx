@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import marinePlywoodImg from '../assets/marine_plywood.png';
 import blockboardImg from '../assets/blockboard_stack.png';
 import laminateImg from '../assets/laminate_pattern.png';
+import shutteringImg from '../assets/shutrring.jpeg';
 
 const productCategories = [
   {
@@ -15,16 +16,24 @@ const productCategories = [
       "15 Layer Plywood",
       "Flexible Plywood",
       "Calibrated Plywood",
-      "Shuttering Plywood",
-      "Film Faced Shuttering Ply",
       "Teak Ply"
+    ]
+  },
+  {
+    title: "Shuttering Plywood",
+    description: "Highly durable and specially treated film-faced plywood designed for concrete formwork. It offers exceptional water resistance, reusability, and a smooth finish for construction projects.",
+    image: shutteringImg,
+    reverse: true,
+    items: [
+      "Shuttering Plywood",
+      "Film Faced Shuttering Ply"
     ]
   },
   {
     title: "Block Boards & Doors",
     description: "Solid, stable, and secure. Our blockboards provide excellent screw holding capacity and warp-free performance, while our premium pine doors offer elegant aesthetics backed by robust structural integrity.",
     image: blockboardImg,
-    reverse: true,
+    reverse: false,
     items: [
       "Water Proof Block Boards",
       "Pine Block Boards",
@@ -36,7 +45,7 @@ const productCategories = [
     title: "Laminates & Accessories",
     description: "The perfect finish for your interior masterpieces. We offer a curated selection of stunning laminates to bring your surfaces to life, along with industrial-grade adhesives and accessories to ensure a flawless installation.",
     image: laminateImg,
-    reverse: false,
+    reverse: true,
     items: [
       "Sunmica",
       "Fabric Sunmica",
