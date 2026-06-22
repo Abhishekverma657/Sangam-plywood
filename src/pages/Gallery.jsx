@@ -18,8 +18,9 @@ import blockboardStackImg from '../assets/blockboard_stack.png';
 import flushDoorWoodImg from '../assets/flush_door_wood.png';
 import bedroomInteriorImg from '../assets/bedroom_interior.png';
 import laminatePatternImg from '../assets/laminate_pattern.png';
+import introVideo from '../assets/intro-video.mp4';
 
-const categories = ["ALL", "PLYWOOD", "BLOCKBOARD", "FLUSH DOORS", "INTERIORS", "LAMINATES", "OFFICE SPACES"];
+const categories = ["ALL", "VIDEOS", "PLYWOOD", "BLOCKBOARD", "FLUSH DOORS", "INTERIORS", "LAMINATES", "OFFICE SPACES"];
 
 const galleryImages = [
   { id: 1, src: livingRoomImg, title: "Luxury Living Room", category: "INTERIORS" },
@@ -81,6 +82,36 @@ const Gallery = () => {
             </button>
           ))}
         </div>
+
+        {/* Featured Video Section - Always visible */}
+        {(activeTab === "ALL" || activeTab === "VIDEOS") && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-16 rounded-2xl overflow-hidden glass-panel relative w-full group shadow-lg border border-white/10"
+          >
+            <video 
+              src={introVideo} 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              controls
+              className="w-full h-auto max-h-[60vh] object-cover"
+            ></video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none opacity-0 group-hover:opacity-100">
+              <span className="inline-block px-3 py-1 bg-primary/20 text-primary border border-primary/30 rounded-full text-xs font-bold tracking-wider uppercase mb-3 backdrop-blur-sm">
+                Featured Presentation
+              </span>
+              <h4 className="text-2xl md:text-3xl font-bold text-white mb-2 shadow-sm">Introduction to Sangam Plywood</h4>
+              <p className="text-white/90 max-w-2xl text-sm md:text-base drop-shadow-md">
+                Discover our commitment to quality, innovation, and durability. Experience the strength and beauty of our premium wood solutions.
+              </p>
+            </div>
+          </motion.div>
+        )}
 
         {/* Gallery Grid with AnimatePresence */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
