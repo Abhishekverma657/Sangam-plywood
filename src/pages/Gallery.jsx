@@ -105,7 +105,7 @@ const Gallery = () => {
             
             {/* Text at top */}
             <div className="absolute top-0 left-0 w-full p-6 md:p-10 -translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none opacity-0 group-hover:opacity-100 z-10">
-              <span className="inline-block px-3 py-1 bg-primary/20 text-primary border border-primary/30 rounded-full text-xs font-bold tracking-wider uppercase mb-3 backdrop-blur-sm">
+              <span className="inline-block px-3 py-1 bg-primary/20 text-white border border-primary/30 rounded-full text-xs font-bold tracking-wider uppercase mb-3 backdrop-blur-sm">
                 Featured Presentation
               </span>
               <h4 className="text-2xl md:text-3xl font-bold text-white mb-2 shadow-sm">Introduction to Sangam Plywood</h4>
